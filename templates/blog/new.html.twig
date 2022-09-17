@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}new{% endblock %}
+
+{% block body %}
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<button class = "btn btn-success"></button>
+{{ form_end(form) }}
+
+{% endblock %}

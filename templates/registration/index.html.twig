@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% form_theme Registrationform 'bootstrap_5_layout.html.twig' %}
+{% block title %}Hello{% endblock %}
+
+{% block body %}
+{{ form_start(Registrationform) }}
+{{ form_widget(Registrationform) }}
+<button class = "btn btn-success"></button>
+{{ form_end(Registrationform) }}
+{% endblock %}

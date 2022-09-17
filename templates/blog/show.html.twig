@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Articles{% endblock %}
+
+{% block body %}
+<style>
+
+.articles{
+    border-radius : 10px;
+    box-shadow : 0 4px 16px rgb(0,0,0,.25);
+    padding : 16px 20px ;
+    margin : 10px;
+}
+img{
+   border-radius : 10px; 
+    box-shadow : 0 4px 16px rgb(0,0,0,.25);
+     margin : 10px;
+}
+</style>
+
+<section class="articles">
+<h3>{{ article.titre }}</h3>
+<article>
+<div class="metadata">
+le 12/10/2022 à 12:00
+<span class="btn btn-success">{{ article.category.titre }}</span>
+</div>
+<img src="{{ article.image }}" alt="">
+<p>{{ article.description }}</p>
+
+<a class="btn btn-danger" href="{{ path('article_edit',{'id': article.id}) }}">Edit</a>
+</article>
+
+
+
+</section>
+
+{% endblock %}
